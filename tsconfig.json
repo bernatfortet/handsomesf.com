@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "es2015",
+    "module": "esNext",
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "jsx": "react",
+    "moduleResolution": "node",
+    "allowJs": false,
+    "sourceMap": true,
+    "removeComments": false,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "components/*": ["./src/components/*"],
+      "config/*": ["./src/config/*"],
+      "controllers": ["./src/controllers"],
+      "controllers/*": ["./src/controllers/*"],
+      "images/*": ["./src/images/*"],
+      "models/*": ["./src/models/*"],
+      "shared/*": ["./shared/*"],
+      "styles/*": ["./src/styles/*"],
+      "styles": ["./src/styles"],
+      "utils/*": ["./src/utils/*"]
+    }
+  },
+  
+  "exclude": [
+    "dist/**/*",
+    "public/**/*",
+    "node_modules"
+  ]
+}
