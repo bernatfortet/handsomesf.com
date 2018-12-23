@@ -31,6 +31,8 @@ export default {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+        <link rel="shortcut icon" type="image/png" href="/meta/favicon-32x32.png" sizes="32x32" />
         {renderMeta.styleTags}
         <title>Handsome Home Sf</title>
       </Head>

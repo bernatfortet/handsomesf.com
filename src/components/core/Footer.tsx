@@ -10,7 +10,7 @@ const Footer = (props: Props) => {
   const { } = props
 
   return (
-    <Box w={'100%'} center mt={40}>
+    <Box w={'100%'} center mt={40} op={0.4}>
       Handsome Goods Co. © 2018
     </Box>
   )
