@@ -9,11 +9,11 @@ export default App
 
 // Render your app
 if (typeof document !== 'undefined') {
-  const renderMethod = module.hot
+  const renderMethod = (module as any).hot
     ? ReactDOM.render
     : ReactDOM.hydrate || ReactDOM.render
 
-  const render = Comp => {
+  const render = (Comp: React.ComponentType) => {
     renderMethod(<Comp />, document.getElementById('root'))
   }
 
@@ -21,7 +21,7 @@ if (typeof document !== 'undefined') {
   render(App)
 
   // Hot Module Replacement
-  if (module.hot) {
-    module.hot.accept('./App', () => render(require('./App').default))
+  if ((module as any).hot) {
+    (module as any).hot.accept('./App', () => render(require('./App').default))
   }
 }

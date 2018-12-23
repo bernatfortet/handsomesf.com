@@ -27,8 +27,6 @@ export default class Nav extends React.Component<Props, State> {
     const { hideLogo } = this.props
     const { showMenu } = this.state
 
-    console.log(`hideLogo`, hideLogo)
-
     return (
       <Row w={'100%'} hCenter flex1>
         <Row w={'100%'} maxw={m.sizes.contentWidth} mh={20} vCenter flxWrap>

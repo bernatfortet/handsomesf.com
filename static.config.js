@@ -1,7 +1,11 @@
 import * as React from 'react'
+import path from 'path'
 
 export default {
+  // siteRoot: 'https://handsomehomesf.com'
   plugins: ['react-static-plugin-typescript', 'react-static-plugin-styled-components'],
+  extensions: ['.js', '.jsx', '.ts', '.tsx'],
+  entry: path.join(__dirname, 'src', 'index.tsx'),
   getSiteData: () => ({
     title: 'Handsome Home Organization',
   }),
@@ -11,27 +15,26 @@ export default {
         path: '/',
         component: 'src/components/pages/Home',
       },
-      {
-        path: '/about',
-        component: 'src/components/pages/About',
-      },
-      {
-        path: '/services',
-        component: 'src/components/pages/Services',
-      },
-      { path: '/404', component: 'src/components/pages/404' },
+      // {
+      //   path: '/about',
+      //   component: 'src/components/pages/About',
+      // },
+      // {
+      //   path: '/services',
+      //   component: 'src/components/pages/Services',
+      // },
+      // { path: '/404', component: 'src/components/pages/404' },
     ]
   },
   Document: ({ Html, Head, Body, children, renderMeta }) => (
-    // `renderMeta.styleTags` contains the styles we need to inject
-    // into the head of each page.
-    <Html>
+    <Html lang="en-US">
       <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         {renderMeta.styleTags}
         <title>Handsome Home Sf</title>
       </Head>
       <Body>{children}</Body>
     </Html>
   ),
-
 }

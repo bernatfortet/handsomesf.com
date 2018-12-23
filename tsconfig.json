@@ -1,15 +1,13 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "target": "es2015",
-    "module": "esNext",
-    "lib": [
-      "es2015",
-      "dom"
-    ],
+    "target": "esnext",
+    "module": "esnext",
+    "lib": [ "es2015", "dom", "es2016" ],
     "jsx": "react",
     "moduleResolution": "node",
     "allowJs": false,
+    "skipLibCheck": true,
     "sourceMap": true,
     "removeComments": false,
     "allowSyntheticDefaultImports": true,
@@ -26,10 +24,10 @@
       "utils/*": ["./src/utils/*"]
     }
   },
-  
   "exclude": [
     "dist/**/*",
     "public/**/*",
+    "lib/**/*",
     "node_modules"
   ]
 }
