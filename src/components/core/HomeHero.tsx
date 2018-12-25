@@ -6,37 +6,33 @@ import styled from 'styled-components'
 import { Box, c, Column, m, Row, s } from 'styles'
 
 import Logo from 'components/core/Logo'
+import Button from 'components/global/Button'
 
 type Props = {
+  title: string,
+  description: string,
 }
 
 const HomeHero: React.SFC<Props> = (props: Props) => {
-  const {} = props
+  const { title, description } = props
 
   return(
-    <Row jcsb w='100%' maxw={1200} mt={20}>
-      <Column maxw={640} mr={80}>
+    <m.ResponsiveRow jcsb style={{width: '100%'}} mt={40} aifs>
+      <Column maxw={m.sizes.leftColumn} mr={80}>
         <Logo height={112} mb={60} />
-        <Title mb={60}>
-          Customized organizational systems to support your daily routines. 
-        </Title>
-        <Desc>
-          Clear out the clutter and noise of brands and frills that vye for your attention. Make a home for what serves what’s most important to you. When everything has a place, you can easily reset any mess. 
-          <br />
-          <br />
+        <Title mb={60}>{title}</Title>
+        <m.Body mb={40}>{description}</m.Body>
 
-          Make it nice, and be nice to yourself.
-        </Desc>
+        <Button asfs iconName='phone'>FREE CONSULTATION</Button>
       </Column>
 
-      <Img src={heroImage} />
+      <Img width={480} height='auto' src={heroImage} />
 
-    </Row>
+    </m.ResponsiveRow>
   )
 }
 
 export default HomeHero
 
 const Title = styled(m.T40)` ${m.brandon} `
-const Desc = styled(m.T20)` ${m.workSans} line-height:1.4; color:${c.black80}; `
-const Img = styled.img` max-height:600px;`
+const Img = styled.img``

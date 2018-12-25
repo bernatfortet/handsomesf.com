@@ -13,7 +13,7 @@ export const brandon = css` font-family: 'Brandon Grotesque', sans-serif; `
 export const tBold = css` font-weight:700; `
 export const tMedium = css` font-weight:500; `
 export const tRegular = css` font-weight:400; `
-export const interFont = css` font-family:'Inter UI',sans-serif; `
+export const interFont = css` font-family:'Inter UI', sans-serif; `
 
 export const t40 = css` font-size:40px; line-height:48px; ${tBold} `
 export const t32 = css` font-size:32px; line-height:42px; ${tBold} `
@@ -21,7 +21,8 @@ export const t28 = css` font-size:28px; line-height:36px; ${tBold} `
 export const t24 = css` font-size:24px; line-height:32px; ${tBold} `
 export const t22 = css` font-size:22px; line-height:28px; ${tRegular} `
 export const t20 = css` font-size:20px; line-height:24px; ${tRegular} `
-export const t18 = css` font-size:18px; line-height:22px; ${tRegular} letter-spacing:-0.02em; `
+export const t19 = css` font-size:19px; line-height:24px; ${tRegular} `
+export const t18 = css` font-size:18px; line-height:22px; ${tRegular} `
 export const t16 = css` font-size:16px; line-height:19px; ${tRegular} `
 export const t15 = css` font-size:15px; line-height:16px; ${tRegular} `
 export const t14 = css` font-size:14px; line-height:16px; ${tRegular} `
@@ -88,6 +89,10 @@ type TextComponentProps = {
   medium?: boolean,
   regular?: boolean,
 
+  brandon?: boolean,
+  workSans?: boolean,
+
+
   // Other Styles
   color?: string,
   opacity?: number,
@@ -114,6 +119,9 @@ const textProps = css<TextComponentProps>`
   ${p => p.medium && tMedium} 
   ${p => p.regular && tRegular} 
   ${p => p.weight && `font-weight:${p.weight};`} 
+
+  ${p => p.brandon && brandon} 
+  ${p => p.workSans && workSans} 
 `
 
 export const T40 = styled(Box) <TextComponentProps>` ${t40} ${textProps}`

@@ -1,9 +1,10 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
 
-const mainTitle = `Handsome Home Orgnaization`
+const mainTitle = `Handsome Home Organization`
 const mainDescription = `Customized organizational systems to support your daily routines.`
-const siteUrl = 'https://handsomehomsf.com'
+const siteUrl = location.hostname == 'localhost' ? location.host : 'https://handsomehomsf.com'
+
 const facebookImg = `${siteUrl}/meta/social-facebook-1200x1200.jpg`
 const themeColor = `#080E1A`
 const support_email = 'steph@ghandsomehomesf.com'

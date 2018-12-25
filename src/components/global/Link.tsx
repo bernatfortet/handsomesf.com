@@ -1,8 +1,8 @@
-import * as React from 'react'
 import { Link as RouterLink } from '@reach/router'
+import * as React from 'react'
 
-import { Box, BoxProps, c, Column, m, Row, s } from 'styles/index'
 import styled from 'styled-components'
+import { Box, BoxProps, c, Column, m, Row, s } from 'styles/index'
 
 interface Props extends BoxProps, React.AnchorHTMLAttributes<HTMLAnchorElement> {
   //Link props

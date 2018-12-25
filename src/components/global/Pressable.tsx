@@ -2,7 +2,6 @@ import { darken, transparentize } from 'polished'
 
 import { Box, BoxProps, s } from '@bernatfortet/global-styles'
 import styled, { css } from 'styled-components'
-
 import c from 'styles/colors'
 
 type PressableProps = {
@@ -14,12 +13,12 @@ type PressableProps = {
   isActive?: boolean,
 } & BoxProps
 
-export const RootPressable = styled(Box).attrs<PressableProps>({
-  color: p => p.color || p.theme.pressable && p.theme.pressable.color || c.black,
-  background: p => p.background || p.theme.pressable && p.theme.pressable.background || 'transparent',
-  hoverColor: p => p.hoverColor || p.theme.pressable && p.theme.pressable.hoverColor || c.black,
-  hoverBg: p => p.hoverBg || p.theme.pressable && p.theme.pressable.hoverBg || c.black10,
-})`
+export const RootPressable = styled(Box).attrs<PressableProps>(p => ({
+  color: p.color || p.theme.pressable && p.theme.pressable.color || c.black,
+  background: p.background || p.theme.pressable && p.theme.pressable.background || 'transparent',
+  hoverColor: p.hoverColor || p.theme.pressable && p.theme.pressable.hoverColor || c.black,
+  hoverBg: p.hoverBg || p.theme.pressable && p.theme.pressable.hoverBg || c.black10,
+}))`
   ${s.unselectable} ${s.anchor} transition: all 200ms;
   color:${p => p.color};
   & svg { fill:${p => p.color};  }
@@ -56,11 +55,5 @@ export const pressableOnWhiteTheme: PressableTheme = {
 
 export const PressableOnBlack = styled(RootPressable).attrs<PressableProps>({ ...pressableOnBlackTheme })``
 export const PressableOnWhite = styled(RootPressable).attrs<PressableProps>({ ...pressableOnWhiteTheme })``
-
-export const PressableBlue = styled(RootPressable).attrs<PressableProps>({
-  color: c.blue,
-  hoverColor: darken(0.8, c.blue),
-  hoverBg: transparentize(0.8, c.blue),
-})``
 
 export default RootPressable

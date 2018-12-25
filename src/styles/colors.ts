@@ -4,22 +4,8 @@ const black = '#09242A'
 const white = 'white'
 
 const baseColors = {
-  rootBackground: black,
-  modalBackground: white,
-  beige: '#F7F7F7',
-  gradientForeground: '#272C2D',
-  superBlack: '#0A0B0D',
-  foreground: '#EEEEEE',
-
-  green: '#67C202',
-  darkGreen: '#38ad00', // Used for green text on white
-  dimGreen: '#43C258',
-  dimRed: '#C04A3B',
-  red: '#FF5900',
-  grey: '#F5F5F5',
-  blue: '#2A99FF',
-  yellow: '#FFB100',
-  orange: '#FF8B21',
+  coral: '#FFBA9C',
+  yellow: '#F5B022',
 
   black: black,
   black95: rgba(black, 0.95),
@@ -50,34 +36,10 @@ const baseColors = {
   white80: rgba(white, 0.8),
   white90: rgba(white, 0.9),
   white: white,
-
-
-  facebook: '#4065B4',
-  twitter: '#1DA1F2',
-  google: 'white',
-  coinbase: '#1D75B7',
 }
 
 export default {
   ...baseColors,
   brand: baseColors.yellow,
-
-  status: {
-    available: baseColors.green,
-    inConversation: baseColors.blue,
-    recording: baseColors.red,
-    unavailable: {
-      onBlack: baseColors.white30,
-      onWhite: baseColors.black30,
-    },
-  },
-
-  lightBlue: transparentize(0.8, baseColors.blue),
-  lightGreen: transparentize(0.8, baseColors.green),
-
-  warning: baseColors.yellow,
-  error: baseColors.red,
-  info: baseColors.blue,
-  inputFocus: transparentize(0.8, baseColors.blue)
 }
 
