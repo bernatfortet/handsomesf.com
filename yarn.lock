@@ -4185,8 +4185,10 @@ figgy-pudding@^3.1.0, figgy-pudding@^3.5.1:
   resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.1.tgz#862470112901c727a0e495a80744bd5baa1d6790"
   integrity sha512-vNKxJHTEKNThjfrdJwHc7brvM6eVevuO5nTj6ez8ZQ1qbXTvGthucRF7S4vf2cr71QVnT70V34v0S1DyQsti0w==
 
-figma-cms@../figma-cms:
-  version "0.0.1"
+figma-cms@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/figma-cms/-/figma-cms-0.0.2.tgz#6d2e0cd495a53c06d6d1fc224d97b147784df3ac"
+  integrity sha512-P9ETujE5C5BO0dE5te/zAfj8usO0OnBs9uUl+PG51o6jqv7dCx/IfqT9Y2cHjABMGGL1KR7Ob7jhKqJtZubB3w==
   dependencies:
     "@types/jest" "^23.3.10"
     axios "^0.18.0"
