@@ -1,3 +1,4 @@
+import { Link as RouterLink } from '@reach/router'
 import { transparentize } from 'polished'
 import React from 'react'
 
@@ -7,7 +8,6 @@ import { Box, c, Column, m, Row, s } from 'styles'
 import Logo from 'components/core/Logo'
 import Button from 'components/global/Button'
 import Icon from 'components/global/Icon'
-import Link from 'components/global/Link'
 import RootPressable from 'components/global/Pressable'
 
 type Props = {
@@ -35,7 +35,7 @@ export default class Nav extends React.Component<Props, State> {
     const { showMenu, scrollY } = this.state
 
     return (
-      <Box h={74} mb={20}>
+      <Box h={74} mb={60}>
         <Wrapper w={'100%'} vCenter flxWrap>
           <Ribbon />
           <Inner h={74} mt={8} vCenter >
@@ -63,29 +63,11 @@ export default class Nav extends React.Component<Props, State> {
     return (
       <Row vCenter className='links'>
 
-        <Link to='/' title='Home'>
-          <Pressable p={20}>
-            <ItemText>Home</ItemText>
-          </Pressable>
-        </Link>
-
-        <Link to='/services' title='Services'>
-          <Pressable p={20}>
-            <ItemText>Services</ItemText>
-          </Pressable>
-        </Link>
-
-        <Link to='/about' title='About'>
-          <Pressable p={20}>
-            <ItemText>About</ItemText>
-          </Pressable>
-        </Link>
-
-        <Link to='/testimonials' title='Testimonials'>
-          <Pressable p={20}>
-            <ItemText>Testimonials</ItemText>
-          </Pressable>
-        </Link>
+        <Link to='/' title='Home' />
+        <Link to='/services' title='Services' />
+        <Link to='/about' title='About' />
+        <Link to='/testimonials' title='Testimonials' />
+        <Link to='/blog' title='Blog' />
 
         <Button iconName='phone' ml={24}>Free consultation</Button>
 
@@ -110,6 +92,17 @@ export default class Nav extends React.Component<Props, State> {
     window.removeEventListener('scroll', this.onScroll)
   }
 
+}
+
+const Link = p => {
+  const isActive = window.location.pathname == p.to
+  return (
+    <RouterLink {...p}>
+      <Pressable p={20} color={isActive ? c.black : c.black60}>
+        <ItemText>{p.title}</ItemText>
+      </Pressable>
+    </RouterLink>
+  )
 }
 
 

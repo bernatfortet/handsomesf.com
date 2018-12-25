@@ -23,7 +23,7 @@ export const GlobalStyles = createGlobalStyle`
     font-feature-settings:"kern" 1; font-kerning: normal;
     box-sizing: border-box;
   }
-  html, body, #react-app { width:100%; min-height:100%; height:100%; margin:0; padding:0; }
+  html, body, #root, #root > div { width:100%; min-height:100%; height:100%; margin:0; padding:0; }
   body{ overflow: auto; overscroll-behavior-y: none; }
   a{ text-decoration:none; color:inherit;}
   *, *:before, *:after{ box-sizing: inherit; }

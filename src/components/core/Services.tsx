@@ -37,7 +37,7 @@ const Services = ({ figmaData }) => {
             {includes.split('\n').map((i, key) => <IncludeItem key={key}>{i}</IncludeItem>)}
           </ul>}
 
-          <Button asfs mt={20} iconName={iconName}>{buttonText}</Button>
+          <Button asfs mt={20} mb={40} iconName={iconName}>{buttonText}</Button>
         </Column>
 
         <m.Img width={m.sizes.rightImage} height='auto' src={serviceImages[key]} />

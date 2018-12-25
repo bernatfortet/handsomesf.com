@@ -30,10 +30,10 @@ export default {
         path: '/testimonials',
         component: 'src/components/pages/TestimonialsPage',
       },
-      // {
-      //   path: '/shop',
-      //   component: 'src/components/pages/ShopPage',
-      // },
+      {
+        path: '/blog',
+        component: 'src/components/pages/BlogPage',
+      },
       { path: '/404', component: 'src/components/pages/NotFoundPage' },
     ]
   },
