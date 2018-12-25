@@ -3,7 +3,7 @@ import path from 'path'
 import { fetchFigma } from 'figma-cms'
 
 export default {
-  // siteRoot: 'https://handsomehomesf.com'
+  siteRoot: 'https://handsomehomesf.com',
   plugins: ['react-static-plugin-typescript', 'react-static-plugin-styled-components'],
   extensions: ['.js', '.jsx', '.ts', '.tsx'],
   entry: path.join(__dirname, 'src', 'index.tsx'),

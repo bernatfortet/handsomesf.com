@@ -23,11 +23,11 @@ export default class Nav extends React.Component<Props, State> {
 
   state = {
     showMenu: false,
-    scrollY: window.scrollY,
+    scrollY: typeof window !== 'undefined' ? window.scrollY : 0,
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.onScroll)
+    typeof window !== 'undefined' && window.addEventListener('scroll', this.onScroll)
   }
 
   render() {
@@ -89,13 +89,13 @@ export default class Nav extends React.Component<Props, State> {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.onScroll)
+    typeof window !== 'undefined' && window.removeEventListener('scroll', this.onScroll)
   }
 
 }
 
 const Link = p => {
-  const isActive = window.location.pathname == p.to
+  const isActive = typeof window !== 'undefined' ? window.location.pathname == p.to : false
   return (
     <RouterLink {...p}>
       <Pressable p={20} color={isActive ? c.black : c.black60}>

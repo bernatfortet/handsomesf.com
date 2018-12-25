@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 
 const mainTitle = `Handsome Home Organization`
 const mainDescription = `Customized organizational systems to support your daily routines.`
-const siteUrl = location.hostname == 'localhost' ? location.host : 'https://handsomehomsf.com'
+const siteUrl = 'https://handsomehomsf.com'
 
 const facebookImg = `${siteUrl}/meta/social-facebook-1200x1200.jpg`
 const themeColor = `#080E1A`
