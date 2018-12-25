@@ -2,6 +2,7 @@ import { Figma } from 'figma-cms'
 import * as React from 'react'
 import { withSiteData } from 'react-static'
 
+import config from 'config'
 import bullet from 'images/bullet.svg'
 import service1 from 'images/service1.jpg'
 import service2 from 'images/service2.jpg'
@@ -13,6 +14,7 @@ import { Box, c, Column, m, Row, s } from 'styles'
 
 import Markdown from 'components/core/Markdown'
 import Button from 'components/global/Button'
+import Link from 'components/global/Link'
 
 const serviceImages = [service1, service2, service3, service4 ]
 
@@ -37,7 +39,10 @@ const Services = ({ figmaData }) => {
             {includes.split('\n').map((i, key) => <IncludeItem key={key}>{i}</IncludeItem>)}
           </ul>}
 
-          <Button asfs mt={20} mb={40} iconName={iconName}>{buttonText}</Button>
+          <Link href={config.bookingsUrl} target='_blank'>
+            <Button asfs mt={20} mb={40} iconName={iconName}>{buttonText}</Button>
+          </Link>
+
         </Column>
 
         <m.Img width={m.sizes.rightImage} height='auto' src={serviceImages[key]} />

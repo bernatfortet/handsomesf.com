@@ -1,5 +1,6 @@
 import * as React from 'react'
 
+import config from 'config'
 import heroImage from 'images/heroImage.jpg'
 
 import styled from 'styled-components'
@@ -7,6 +8,7 @@ import { Box, c, Column, m, Row, s } from 'styles'
 
 import Logo from 'components/core/Logo'
 import Button from 'components/global/Button'
+import Link from 'components/global/Link'
 
 type Props = {
   title: string,
@@ -23,7 +25,10 @@ const HomeHero: React.SFC<Props> = (props: Props) => {
         <Title mb={60}>{title}</Title>
         <m.Body mb={40}>{description}</m.Body>
 
-        <Button asfs iconName='phone' mb={40}>FREE CONSULTATION</Button>
+        <Link href={config.bookingsUrl} target='_blank'>
+          <Button asfs iconName='phone' mb={40}>FREE CONSULTATION</Button>
+        </Link>
+
       </Column>
 
       <Img width={480} height='auto' src={heroImage} />

@@ -2,6 +2,8 @@ import { Link as RouterLink } from '@reach/router'
 import { transparentize } from 'polished'
 import React from 'react'
 
+import config from 'config'
+
 import styled from 'styled-components'
 import { Box, c, Column, m, Row, s } from 'styles'
 
@@ -69,7 +71,10 @@ export default class Nav extends React.Component<Props, State> {
         <Link to='/testimonials' title='Testimonials' />
         <Link to='/blog' title='Blog' />
 
-        <Button iconName='phone' ml={24}>Free consultation</Button>
+        <Link href={config.bookingsUrl} target='_blank'>
+          <Button iconName='phone' ml={24}>Free consultation</Button>
+        </Link>
+
 
         {/* <Link to='/shop' title='Shop'>
           <Pressable p={20}>
