@@ -15,8 +15,6 @@ const testimonialImages = [person1, person2, person3]
 
 
 const Testimonials = ({ figmaData }) => {
-
-
   const figma = new Figma(figmaData)
   const canvas = figma.getCanvas('Pages')
   const frame = canvas.getFrame('Testimonials')
