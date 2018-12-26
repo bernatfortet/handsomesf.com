@@ -1,7 +1,9 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
 
-const mainTitle = `Handsome Home Organization`
+import config from 'config'
+
+const mainTitle = config.webTitle
 const mainDescription = `Customized organizational systems to support your daily routines.`
 const siteUrl = 'https://handsomehomsf.com'
 

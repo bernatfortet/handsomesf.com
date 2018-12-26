@@ -10,6 +10,7 @@ import { Box, c, Column, m, Row, s } from 'styles'
 
 import Layout from 'components/core/Layout'
 import Markdown from 'components/core/Markdown'
+import ScreenMeta from 'components/core/ScreenMeta'
 import Button from 'components/global/Button'
 import Link from 'components/global/Link'
 
@@ -23,6 +24,7 @@ export default withSiteData(({ figmaData }) => {
 
   return (
     <Layout>
+      <ScreenMeta title='About' />
       <m.ResponsiveRow w='100%' aifs jcsb>
         <Column maxw={m.sizes.leftColumn} mr={40}>
           <m.Title mb={12}>{title}</m.Title>

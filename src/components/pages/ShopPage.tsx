@@ -4,10 +4,13 @@ import { withSiteData } from 'react-static'
 import { Box } from 'styles'
 
 import Layout from 'components/core/Layout'
+import ScreenMeta from 'components/core/ScreenMeta'
 
 export default withSiteData(data => {
   return (
-    <Layout hideLogo>
+    <Layout>
+      <ScreenMeta title='Shop' />
+    
       <Box>Shop</Box>
     </Layout>
   )

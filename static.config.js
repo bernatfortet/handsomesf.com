@@ -46,7 +46,7 @@ export default {
         <link rel="shortcut icon" type="image/png" href="/meta/favicon-32x32.png" sizes="32x32" />
         {renderMeta.styleTags}
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        <title>Handsome Home Sf</title>
+        <title>Handsome Home Organization</title>
       </Head>
       <Body>{children}</Body>
     </Html>
