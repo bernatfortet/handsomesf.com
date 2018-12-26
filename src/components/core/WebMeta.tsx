@@ -5,11 +5,11 @@ import config from 'config'
 
 const mainTitle = config.webTitle
 const mainDescription = config.webDescription
-const siteUrl = 'https://handsomehomsf.com'
+const siteUrl = 'https://handsomehomesf.com'
 
 const facebookImg = `${siteUrl}/meta/social-facebook-1200x1200.jpg`
 const themeColor = `#080E1A`
-const support_email = 'steph@ghandsomehomesf.com'
+const support_email = 'steph@handsomehomesf.com'
 
 type Props = {
   title?: string,
