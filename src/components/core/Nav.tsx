@@ -1,4 +1,3 @@
-import { Link as RouterLink } from '@reach/router'
 import { transparentize } from 'polished'
 import React from 'react'
 
@@ -10,6 +9,7 @@ import { Box, c, Column, m, Row, s } from 'styles'
 import Logo from 'components/core/Logo'
 import Button from 'components/global/Button'
 import Icon from 'components/global/Icon'
+import RootLink from 'components/global/Link'
 import RootPressable from 'components/global/Pressable'
 
 type Props = {
@@ -102,11 +102,11 @@ export default class Nav extends React.Component<Props, State> {
 const Link = p => {
   const isActive = typeof window !== 'undefined' ? window.location.pathname == p.to : false
   return (
-    <RouterLink {...p}>
+    <RootLink {...p}>
       <Pressable p={20} color={isActive ? c.black : c.black60}>
         <ItemText>{p.title}</ItemText>
       </Pressable>
-    </RouterLink>
+    </RootLink>
   )
 }
 
