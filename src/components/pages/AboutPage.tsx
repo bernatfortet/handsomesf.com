@@ -27,7 +27,7 @@ export default withSiteData(({ figmaData }) => {
       <ScreenMeta title='About' />
       <m.ResponsiveRow w='100%' aifs jcsb>
         <Column maxw={m.sizes.leftColumn} mr={40}>
-          <m.Title mb={12}>{title}</m.Title>
+          <m.Title as='h2' mb={12}>{title}</m.Title>
           <Markdown content={body} />
 
           <Link href={config.bookingsUrl} target='_blank'>
