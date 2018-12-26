@@ -29,6 +29,9 @@ export const GlobalStyles = createGlobalStyle`
   *, *:before, *:after{ box-sizing: inherit; }
   svg{ box-sizing: content-box; }
   input{ outline:0; border:0; }
+  h1, h2, h3, h4, h5, h6{
+    margin: 0; padding:0; border:0; font-size:100%; font:inherit; font-weight:normal; font-style:normal; vertical-align: baseline;
+  }
 `
 
 export const c = colors

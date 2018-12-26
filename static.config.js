@@ -1,6 +1,7 @@
 import * as React from 'react'
 import path from 'path'
 import { fetchFigma } from 'figma-cms'
+import config from './src/config'
 
 export default {
   siteRoot: 'https://handsomehomesf.com',
@@ -46,7 +47,8 @@ export default {
         <link rel="shortcut icon" type="image/png" href="/meta/favicon-32x32.png" sizes="32x32" />
         {renderMeta.styleTags}
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        <title>Handsome Home Organization</title>
+        <title>{config.webTitle}</title>
+        <meta name="description" content={config.webDescription} />
       </Head>
       <Body>{children}</Body>
     </Html>

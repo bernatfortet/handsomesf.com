@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import config from 'config'
 
 const mainTitle = config.webTitle
-const mainDescription = `Customized organizational systems to support your daily routines.`
+const mainDescription = config.webDescription
 const siteUrl = 'https://handsomehomsf.com'
 
 const facebookImg = `${siteUrl}/meta/social-facebook-1200x1200.jpg`

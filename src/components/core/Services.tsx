@@ -31,7 +31,7 @@ const Services = ({ figmaData }) => {
     return (
       <Wrapper w='100%' key={key} mb={120} aifs jcsb>
         <Column maxw={m.sizes.leftColumn} mr={40}>
-          <m.SubTitle mb={12}>{title}</m.SubTitle>
+          <m.SubTitle as='h2' mb={12}>{title}</m.SubTitle>
 
           <Markdown content={description} mb={20} />
 
