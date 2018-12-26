@@ -25,7 +25,7 @@ export default withSiteData(({ figmaData }) => {
     <Layout>
       <m.ResponsiveRow w='100%' aifs jcsb>
         <Column maxw={m.sizes.leftColumn} mr={40}>
-          <m.Title>{title}</m.Title>
+          <m.Title mb={12}>{title}</m.Title>
           <Markdown content={body} />
 
           <Link href={config.bookingsUrl} target='_blank'>

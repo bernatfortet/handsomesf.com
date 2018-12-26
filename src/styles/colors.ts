@@ -5,7 +5,7 @@ const white = 'white'
 
 const baseColors = {
   coral: '#FFBA9C',
-  yellow: '#F5B022',
+  yellow: '#FFC145',
 
   black: black,
   black95: rgba(black, 0.95),

@@ -39,8 +39,8 @@ const Services = ({ figmaData }) => {
             {includes.split('\n').map((i, key) => <IncludeItem key={key}>{i}</IncludeItem>)}
           </ul>}
 
-          <Link href={config.bookingsUrl} target='_blank'>
-            <Button asfs mt={20} mb={40} iconName={iconName}>{buttonText}</Button>
+          <Link href={config.bookingsUrl} target='_blank' mt={20} mb={40} >
+            <Button asfs  iconName={iconName}>{buttonText}</Button>
           </Link>
 
         </Column>
