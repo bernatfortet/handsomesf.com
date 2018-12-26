@@ -45,37 +45,13 @@ export const globalTextStyles = css`
 
   @font-face {
       font-family: 'Brandon Grotesque';
-      src: url(fonts/brandongrotesque-regular.eot);
-      src: url(fonts/brandongrotesque-regular.eot?#iefix) format("embedded-opentype"),url(fonts/brandongrotesque-regular.woff) format("woff"),url(fonts/brandongrotesque-regular.ttf) format("truetype"),url(fonts/brandongrotesque-regular.svg#BrandonGrotesqueRegular) format("svg");
-      font-weight: 400;
-      font-weight: 400;
-      font-style: normal;
-  }
-
-  @font-face {
-      font-family: 'Brandon Grotesque';
-      src: url(fonts/brandongrotesque-light.eot);
-      src: url(fonts/brandongrotesque-light.eot?#iefix) format("embedded-opentype"),url(fonts/brandongrotesque-light.woff) format("woff"),url(fonts/brandongrotesque-light.ttf) format("truetype"),url(fonts/brandongrotesque-light.svg#BrandonGrotesqueLight) format("svg");
-      font-weight: 200;
-      font-style: normal;
-  }
-
-  @font-face {
-      font-family: 'Brandon Grotesque';
       src: url(fonts/brandongrotesque-bold.eot);
       src: url(fonts/brandongrotesque-bold.eot?#iefix) format("embedded-opentype"),url(fonts/brandongrotesque-bold.woff) format("woff"),url(fonts/brandongrotesque-bold.ttf) format("truetype"),url(fonts/brandongrotesque-bold.svg#BrandonGrotesqueBold) format("svg");
       font-weight: 700;
       font-weight: 700;
       font-style: normal;
   }
-
-  @font-face {
-      font-family: 'Brandon Grotesque';
-      src: url(fonts/brandongrotesque-black.eot);
-      src: url(fonts/brandongrotesque-black.eot?#iefix) format("embedded-opentype"),url(fonts/brandongrotesque-black.woff) format("woff"),url(fonts/brandongrotesque-black.ttf) format("truetype"),url(fonts/brandongrotesque-black.svg#BrandonGrotesqueBlack) format("svg");
-      font-weight: 900;
-      font-style: normal;
-  }
+  
 `
 
 type TextComponentProps = {

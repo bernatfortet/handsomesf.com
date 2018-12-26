@@ -41,7 +41,11 @@ export default class Nav extends React.Component<Props, State> {
         <Wrapper w={'100%'} vCenter flxWrap>
           <Ribbon />
           <Inner h={74} mt={8} vCenter >
-            <StyledLogo height={54} isVisible={!hideLogo || scrollY > 100}/>
+
+            <LogoLink to='/' title='Home' >
+              <StyledLogo height={54} isVisible={!hideLogo || scrollY > 100}/>
+            </LogoLink>    
+
             <Box flex1 />
 
             <Hamburger name='menu' onMouseDown={this.onToggleMenu} />
@@ -138,4 +142,6 @@ const HorizontalMenu = styled(Row)`
 
 const Hamburger = styled(Icon).attrs({ size: 28 })` padding:20px; ${s.anchor}
 		@media (min-width: ${hamburgerMinWidth}){ display:none; }
-	`
+  `
+  
+const LogoLink = styled(RootLink)` &:hover{ opacity:0.7; } ${s.anim} `
