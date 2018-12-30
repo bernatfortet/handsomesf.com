@@ -18,46 +18,49 @@ import Link from 'components/global/Link'
 
 const serviceImages = [service1, service2, service3, service4 ]
 
-const Services = ({ figmaData }) => {
+const Services = ({ servicesList }) => {
 
-  const figma = new Figma(figmaData)
-  const canvas = figma.getCanvas('Pages')
-  const frame = canvas.getFrame('Services')
+  const services = servicesList.getSeries(['title', 'description', 'includes', 'buttonText', 'iconName'])
 
-  const services = frame.getSeries(['title', 'description', 'includes', 'buttonText', 'iconName'])
-  
-  return services.map((service: any, key) => {
-    const { title, description, includes, buttonText, iconName } = service
-    return (
-      <Wrapper w='100%' key={key} mb={120} aifs jcsb>
-        <Column maxw={m.sizes.leftColumn} mr={40}>
-          <m.SubTitle as='h2' mb={12}>{title}</m.SubTitle>
+  return(
+    <Box flxWrap jcsb mh={-40}>
+      {services.map((service: any, key) => {
+        const { title, description, includes, buttonText, iconName } = service
+        return (
+          <Wrapper key={key} mb={60} aifs jcsb>
+            <Box mh={40}>
+              <Img width={400} height={200} src={serviceImages[key]} cover />
+              <m.SubTitle as='h2' mt={12} mb={12}>{title}</m.SubTitle>
 
-          <Markdown content={description} mb={20} />
+              {description && <Markdown content={description} />}
 
-          {includes && <ul>
-            {includes.split('\n').map((i, key) => <IncludeItem key={key}>{i}</IncludeItem>)}
-          </ul>}
+              {includes && <ul>
+                {includes.split('\n').map((item, key) => <IncludeItem key={key}>
+                  <Markdown content={item} mt={-26} />
+                </IncludeItem>)}
+              </ul>}
 
-          <Link href={config.bookingsUrl} target='_blank' mt={20} mb={40} >
-            <Button asfs  iconName={iconName}>{buttonText}</Button>
-          </Link>
+              <Link href={config.bookingsUrl} target='_blank' mt={28} >
+                <Button asfs iconName={iconName}>{buttonText}</Button>
+              </Link>
+            </Box>
 
-        </Column>
+          </Wrapper>
+        )
+      })}
+    </Box>
+  )
 
-        <m.Img width={m.sizes.rightImage} height='auto' src={serviceImages[key]} />
-
-
-      </Wrapper>
-    )
-  })
 }
 
-export default withSiteData(Services)
+export default Services
 
-const Wrapper = styled(m.ResponsiveRow)` 
-  ul{  list-style:none; margin-left:0; padding-inline-start:0; margin:-24px 0 0; }
+const Wrapper = styled(Column)` 
+  width:50%;
+  ${s.media.md` width:100%; `}
+  ul{ margin-top:12px; list-style:none; margin-left:0; padding-inline-start:0; }
 `
+const Img = styled(m.Img)` width:400px;  ${s.media.md` width:100%; `} `
 const IncludeItem = styled.li` ${m.tBody} margin-left:21px; margin-bottom:12px;
   &:before{
     content:''; display:inline-block; 

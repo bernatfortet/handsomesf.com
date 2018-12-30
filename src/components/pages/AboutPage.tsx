@@ -34,7 +34,7 @@ export default withSiteData(({ figmaData }) => {
             <Button iconName='phone'>Free consultation</Button>
           </Link>
         </Column>
-        <m.Img w={m.sizes.rightImage} h='auto' src={stephImg}/>
+        <m.Img width={m.sizes.rightImage} height='auto' src={stephImg}/>
       </m.ResponsiveRow>
     </Layout>
   )

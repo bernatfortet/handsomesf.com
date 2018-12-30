@@ -16,7 +16,19 @@ export const sizes = {
 
 export const Svg = styled.svg<BoxProps>` ${s.boxProps}`
 
-export const Img = styled.img.attrs(p => ({ br: p.br || 4 }))<BoxProps>` max-width:100%; ${s.boxProps} `
+export const Img = styled(Box).attrs(p => ({
+  br: p.br || 4,
+  style: p.cover ? { backgroundImage: `url(${p.src})`} : null,
+  w: p.cover ? p.width : null,
+  h: p.cover ? p.height : null,
+  src: p.cover ? null : p.src,
+  as: p.cover ? 'div' : 'img',
+}))<BoxProps>`
+  max-width:100%; ${s.boxProps}
+  background-size: cover;
+  background-repeat: no-repeat
+`
+
 
 
 export const ResponsiveRow = styled(Box)` ${s.flxRow} ${s.media.lg` ${s.flxCol}`} `

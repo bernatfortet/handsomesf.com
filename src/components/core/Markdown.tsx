@@ -20,6 +20,6 @@ export default Markdown
 
 
 const StyledMarkdown = styled(ReactMarkdown)`
-  & p{ ${m.tBody} margin-top:0; margin-bottom:32px; }
+  & p{ ${m.tBody} margin-top:0; }
   & a{ ${s.anchor} }
 `

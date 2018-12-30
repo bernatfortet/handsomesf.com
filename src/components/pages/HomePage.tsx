@@ -18,13 +18,15 @@ export default withSiteData(({ figmaData }) => {
     title: frame.getElement('title').getCharacters(),
     description: frame.getElement('description').getCharacters(),
   }
+  const servicesList = canvas.getFrame('Services').getContainer('servicesList')
+
 
   return (
     <Layout hideLogo>
       <WebMeta />
       <HomeHero {...heroData} />
       <m.UnderlinedTitle asfs mt={120} mb={40}>Services</m.UnderlinedTitle>
-      <Services />
+      <Services servicesList={servicesList} />
     </Layout>
   )
 })
