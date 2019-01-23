@@ -50,7 +50,10 @@ export default {
         <title>{config.webTitle}</title>
         <meta name="description" content={config.webDescription} />
       </Head>
-      <Body>{children}</Body>
+      <Body>
+        {children}
+        <script async='async' src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script>
+      </Body>
     </Html>
   ),
 }
