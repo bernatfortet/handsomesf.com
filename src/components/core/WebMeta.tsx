@@ -5,11 +5,11 @@ import config from 'config'
 
 const mainTitle = config.webTitle
 const mainDescription = config.webDescription
-const siteUrl = 'https://handsomehomesf.com'
+const siteUrl = 'https://handsomesf.com'
 
 const facebookImg = `${siteUrl}/meta/social-facebook-1200x1200.jpg`
 const themeColor = `#080E1A`
-const support_email = 'steph@handsomehomesf.com'
+const support_email = 'steph@handsomesf.com'
 
 type Props = {
   title?: string,
@@ -82,7 +82,7 @@ const WebMeta: React.SFC<Props> = (props: Props) => {
             "addressCountry": "US"
           },
           "sameAs": [
-            "https://www.instagram.com/handsomehome_sf/",
+            "https://www.instagram.com/handsome_sf/",
           ],
           "contactPoint": [
             {

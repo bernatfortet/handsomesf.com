@@ -4,7 +4,7 @@ import { fetchFigma } from 'figma-cms'
 import config from './src/config'
 
 export default {
-  siteRoot: 'https://handsomehomesf.com',
+  siteRoot: 'https://handsomesf.com',
   plugins: ['react-static-plugin-typescript', 'react-static-plugin-styled-components'],
   extensions: ['.js', '.jsx', '.ts', '.tsx'],
   entry: path.join(__dirname, 'src', 'index.tsx'),
