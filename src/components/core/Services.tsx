@@ -20,7 +20,7 @@ const serviceImages = [service1, service2, service3, service4 ]
 
 const Services = ({ servicesList }) => {
 
-  const services = servicesList.getSeries(['title', 'description', 'includes', 'buttonText', 'iconName'])
+  const services = servicesList.getSeries(['title', 'description', 'includes', 'buttonText', 'iconName', 'attribution'])
 
   return(
     <Box flxWrap jcsb mh={-40}>
@@ -29,7 +29,7 @@ const Services = ({ servicesList }) => {
         return (
           <Wrapper key={key} mb={60} aifs jcsb>
             <Box mh={40}>
-              <Img width={400} height={200} src={serviceImages[key]} cover />
+              <Img width={400} height={400} src={serviceImages[key]} cover />
               <m.SubTitle as='h2' mt={12} mb={12}>{title}</m.SubTitle>
 
               {description && <Markdown content={description} />}

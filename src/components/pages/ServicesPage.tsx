@@ -2,8 +2,6 @@ import { Figma } from 'figma-cms'
 import React from 'react'
 import { withSiteData } from 'react-static'
 
-import kitchenCleanse from 'images/kitchenCleanse.jpg'
-
 import styled from 'styled-components'
 import { Box, Column, m, s } from 'styles'
 
@@ -18,7 +16,7 @@ export default withSiteData(({ figmaData }) => {
   const frame = canvas.getFrame('Services')
 
   const title = frame.getElement('title').getCharacters()
-  const body = frame.getElement('body').getCharacters()
+  // const body = frame.getElement('body') ? frame.getElement('body').getCharacters() : null
   const servicesList = frame.getContainer('servicesList')
 
   
@@ -28,11 +26,10 @@ export default withSiteData(({ figmaData }) => {
       
       <m.ResponsiveRow w='100%' aifs jcsb mb={80}>
         <ResponsiveColumn maxw={m.sizes.leftColumn} mr={80}>
-          <m.Title as='h1' mb={12}>{title}</m.Title>
-          <Markdown content={body} />
+          {title && <m.Title as='h1' mb={12}>{title}</m.Title>}
+          {/* {body && <Markdown content={body} />} */}
         </ResponsiveColumn>
         
-        <m.Img width={480} mt={12} height='auto' src={kitchenCleanse} />
       </m.ResponsiveRow>
 
 
