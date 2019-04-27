@@ -73,7 +73,7 @@ export default class Nav extends React.Component<Props, State> {
         <Link to='/services' title='Services' />
         <Link to='/about' title='About' />
         <Link to='/testimonials' title='Testimonials' />
-        <Link to='/blog' title='Blog' />
+        <Link to='/gallery' title='Gallery' />
 
         <RootLink href={config.bookingsUrl} target='_blank' ml={0}>
           <Button iconName='phone' ml={24}>Free consultation</Button>
@@ -115,11 +115,11 @@ const Link = p => {
 }
 
 
-const Pressable = p => <RootPressable color={c.black60} hoverBg={transparentize(0.8, c.coral)} {...p} />
+const Pressable = p => <RootPressable color={c.black60} hoverBg={transparentize(0.8, c.brand)} {...p} />
 
 const Wrapper = styled(Row)` width:100%; position:fixed; top:0; left:0; right:0; background:white; z-index:10; `
   const Inner = styled(Row)` width:${m.sizes.contentWidth}px; margin: 0 auto; padding:0 20px; `
-  const Ribbon = styled(Box)` height:4px; width:100%; background:${c.coral}; `
+  const Ribbon = styled(Box)` height:4px; width:100%; background:${c.brand}; `
   const BottomBorder = styled(Box)<{isActive: boolean}>` width:100%; height:1px; background:${c.black10}; opacity:0; ${s.anim} ${p => p.isActive && `opacity:1; `}   `
 
 

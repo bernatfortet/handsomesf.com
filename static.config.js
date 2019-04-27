@@ -32,8 +32,8 @@ export default {
         component: 'src/components/pages/TestimonialsPage',
       },
       {
-        path: '/blog',
-        component: 'src/components/pages/BlogPage',
+        path: '/gallery',
+        component: 'src/components/pages/GalleryPage',
       },
       { path: '/404', component: 'src/components/pages/NotFoundPage' },
     ]

@@ -5,6 +5,7 @@ import { withSiteData } from 'react-static'
 import { Box, m } from 'styles'
 
 import HomeHero from 'components/core/HomeHero'
+import InstagramStrip from 'components/core/InstagramStrip'
 import Layout from 'components/core/Layout'
 import Services from 'components/core/Services'
 import WebMeta from 'components/core/WebMeta'
@@ -16,7 +17,6 @@ export default withSiteData(({ figmaData }) => {
 
   const heroData = {
     title: frame.getElement('title').getCharacters(),
-    description: frame.getElement('description').getCharacters(),
   }
   const servicesList = canvas.getFrame('Services').getContainer('servicesList')
 
@@ -27,6 +27,8 @@ export default withSiteData(({ figmaData }) => {
       <HomeHero {...heroData} />
       <m.UnderlinedTitle asfs mt={120} mb={40}>Services</m.UnderlinedTitle>
       <Services servicesList={servicesList} />
+      
+      <InstagramStrip />
     </Layout>
   )
 })

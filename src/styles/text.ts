@@ -9,6 +9,7 @@ export const resetTextAttributes = css` font-family:inherit; font-size:inherit; 
 export const merriweather = css` font-family: 'Merriweather', serif; `
 export const workSans = css` font-family: 'Work Sans', sans-serif; `
 export const brandon = css` font-family: 'Brandon Grotesque', sans-serif; `
+export const serif = css` font-family: Goergia, serif; font-style:italic; `
 
 export const tBold = css` font-weight:700; `
 export const tMedium = css` font-weight:500; `
@@ -97,6 +98,7 @@ const textProps = css<TextComponentProps>`
   ${p => p.weight && `font-weight:${p.weight};`} 
 
   ${p => p.brandon && brandon} 
+  ${p => p.serif && serif} 
   ${p => p.workSans && workSans} 
 `
 

@@ -29,7 +29,7 @@ const Services = ({ servicesList }) => {
         return (
           <Wrapper key={key} mb={60} aifs jcsb>
             <Box mh={40}>
-              <Img width={400} height={400} src={serviceImages[key]} cover />
+              <Img width={460} height={400} src={serviceImages[key]} cover />
               <m.SubTitle as='h2' mt={12} mb={12}>{title}</m.SubTitle>
 
               {description && <Markdown content={description} />}
@@ -60,7 +60,7 @@ const Wrapper = styled(Column)`
   ${s.media.md` width:100%; `}
   ul{ margin-top:12px; list-style:none; margin-left:0; padding-inline-start:0; }
 `
-const Img = styled(m.Img)` width:400px;  ${s.media.md` width:100%; `} `
+const Img = styled(m.Img)` ${s.media.md` width:100%; `} `
 const IncludeItem = styled.li` ${m.tBody} margin-left:21px; margin-bottom:12px;
   &:before{
     content:''; display:inline-block; 

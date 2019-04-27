@@ -10,7 +10,7 @@ import ScreenMeta from 'components/core/ScreenMeta'
 export default withSiteData(data => {
   return (
     <Layout>
-      <ScreenMeta title='Blog' />
+      <ScreenMeta title='Gallery' />
       <InstagramFeed />
     </Layout>
   )
