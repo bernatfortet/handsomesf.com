@@ -42,13 +42,12 @@ export default {
     <Html lang="en-US">
       <Head>
         <meta charSet="UTF-8" />
+        <link rel="canonical" href="https://handsomesf.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
         <link rel="shortcut icon" type="image/png" href="/meta/favicon-32x32.png" sizes="32x32" />
         {renderMeta.styleTags}
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        <title>{config.webTitle}</title>
-        <meta name="description" content={config.webDescription} />
       </Head>
       <Body>
         {children}
