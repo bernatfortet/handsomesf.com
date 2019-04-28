@@ -27,7 +27,6 @@ export default withSiteData(({ figmaData }) => {
       <m.ResponsiveRow w='100%' aifs jcsb mb={80}>
         <ResponsiveColumn maxw={m.sizes.leftColumn} mr={80}>
           {title && <m.Title as='h1' mb={12}>{title}</m.Title>}
-          {/* {body && <Markdown content={body} />} */}
         </ResponsiveColumn>
         
       </m.ResponsiveRow>

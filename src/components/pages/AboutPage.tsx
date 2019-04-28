@@ -37,7 +37,7 @@ export default withSiteData(({ figmaData }) => {
 
 
         </Column>
-        <Quote />
+        <Quote mt={40} />
 
       </m.ResponsiveRow>
 
@@ -51,7 +51,7 @@ export default withSiteData(({ figmaData }) => {
           </Link>
         </Column>
 
-        <m.Img width={m.sizes.rightImage} height='auto' src={stephImg}/>
+        <m.Img width={m.sizes.rightImage} height='auto' src={stephImg} mt={40} />
 
 
       </m.ResponsiveRow>

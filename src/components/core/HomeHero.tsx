@@ -19,8 +19,8 @@ const HomeHero: React.SFC<Props> = (props: Props) => {
 
   return(
     <Grid>
-      <Logo height={112} minw={260  } mr={120} />
-      <Title maxw={610} as='h1'>{title}</Title>
+      <Logo height={112} minw={260} />
+      <Title maxw={610} as='h2'>{title}</Title>
 
     </Grid>
     // <m.ResponsiveRow jcsb style={{width: '100%'}} aifs>

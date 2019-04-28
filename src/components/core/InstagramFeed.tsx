@@ -25,7 +25,7 @@ const InstagramFeed: React.SFC<Props> = (props: Props) => {
       '</div>' +
     '</a>'
 
-  return <InstaFeed limit={20} template={template} />
+  return <InstaFeed limit={100} template={template} />
 }
 
 export default InstagramFeed
