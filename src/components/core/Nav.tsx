@@ -75,7 +75,7 @@ export default class Nav extends React.Component<Props, State> {
         <Link to='/testimonials' title='Testimonials' />
         <Link to='/gallery' title='Gallery' />
 
-        <RootLink href={config.bookingsUrl} target='_blank' ml={0}>
+        <RootLink href={config.consultationUrl} target='_blank' ml={0}>
           <Button iconName='phone' ml={24}>Free consultation</Button>
         </RootLink>
 

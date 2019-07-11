@@ -46,7 +46,7 @@ export default withSiteData(({ figmaData }) => {
           <m.Title as='h2' mb={12}>{title2}</m.Title>
           <Markdown content={body2} />
 
-          <Link href={config.bookingsUrl} target='_blank' mv={20}>
+          <Link href={config.consultationUrl} target='_blank' mv={20}>
             <Button iconName='phone'>Free consultation</Button>
           </Link>
         </Column>
