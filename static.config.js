@@ -35,6 +35,10 @@ export default {
         path: '/gallery',
         component: 'src/components/pages/GalleryPage',
       },
+      // {
+      //   path: '/signature',
+      //   component: 'src/components/pages/Signature',
+      // },
       { path: '/404', component: 'src/components/pages/NotFoundPage' },
     ]
   },
