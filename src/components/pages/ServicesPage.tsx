@@ -31,7 +31,6 @@ export default withSiteData(({ figmaData }) => {
         
       </m.ResponsiveRow>
 
-
       <Services servicesList={servicesList}/>
 
     </Layout>
