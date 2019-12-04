@@ -20,13 +20,8 @@ const HomeHero: React.SFC<Props> = (props: Props) => {
   return(
     <Grid>
       <Logo height={112} minw={260} />
-      <Title maxw={610} as='h2'>{title}</Title>
-
+      <Title maxw={700} as='h2'>{title}</Title>
     </Grid>
-    // <m.ResponsiveRow jcsb style={{width: '100%'}} aifs>
-    //   <TextColumn>
-    //   </TextColumn>
-    // </m.ResponsiveRow>
   )
 }
 
@@ -37,6 +32,6 @@ const Title = styled(m.T40)` ${m.brandon} `
 const TextColumn = styled(Row)` margin-right:80px; ${s.media.md` margin-right:0px;`} `
 
 const Grid = styled(Box)`
-  display:grid; grid-template-columns:1fr 1fr; grid-gap:20px;
+  display:grid; grid-template-columns:1fr 1.2fr; grid-gap:20px;
   ${s.media.md` grid-template-columns:1fr; `}
 `

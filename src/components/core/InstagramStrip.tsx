@@ -28,7 +28,7 @@ const InstagramStrip: React.FunctionComponent<Props> = (props: Props) => {
 
 
   return (
-    <Wrapper center pv={20} bg={transparentize(0.8, c.brand)}>
+    <Wrapper center pv={20} mt={60} bg={transparentize(0.8, c.brand)}>
       <FindUsRow />
 
       <InstaFeed limit={5} template={template} />
