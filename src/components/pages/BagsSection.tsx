@@ -12,7 +12,7 @@ const BagsSection: React.FunctionComponent<Props> = (props: Props) => {
   const {} = props
 
   return <>
-      <m.UnderlinedTitle asfs mt={120} mb={40}>Perfect Fill Bulk Bags</m.UnderlinedTitle>
+      <m.Title asfs mt={120} mb={40}>Perfect Fill Bulk Bags</m.Title>
       <m.ResponsiveRow w='100%' aifs jcsb mb={80}>
         <Grid>
           <m.Img src={bagsImg} mr={20} />
