@@ -52,6 +52,7 @@ export default {
         <link rel="shortcut icon" type="image/png" href="/meta/favicon-32x32.png" sizes="32x32" />
         {renderMeta.styleTags}
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <meta name="google-site-verification" content="iTgVUbtYKnJOpi1sAsAun10J6jl1welmJx6U6U6WhMg" />
       </Head>
       <Body>
         {children}
